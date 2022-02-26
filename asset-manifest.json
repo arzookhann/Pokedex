@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Pokedex/static/css/main.fba46546.css",
+    "main.css": "/Pokedex/static/css/main.8a8c8de1.css",
     "main.js": "/Pokedex/static/js/main.b66d9dda.js",
     "static/media/team-rocket-trio.svg": "/Pokedex/static/media/team-rocket-trio.134aabf54c33f5333b9708eaa9d5298b.svg",
     "static/media/banner.svg": "/Pokedex/static/media/banner.f2530ccc146f8c70a09b6d2ab3215e7d.svg",
     "static/media/logo.svg": "/Pokedex/static/media/logo.f84b84ef6c5a64d1c8c1c02d1129d5d9.svg",
     "index.html": "/Pokedex/index.html",
     "static/media/arrow-down.svg": "/Pokedex/static/media/arrow-down.3648f2543755b3867630.svg",
-    "main.fba46546.css.map": "/Pokedex/static/css/main.fba46546.css.map",
+    "main.8a8c8de1.css.map": "/Pokedex/static/css/main.8a8c8de1.css.map",
     "main.b66d9dda.js.map": "/Pokedex/static/js/main.b66d9dda.js.map"
   },
   "entrypoints": [
-    "static/css/main.fba46546.css",
+    "static/css/main.8a8c8de1.css",
     "static/js/main.b66d9dda.js"
   ]
 }
