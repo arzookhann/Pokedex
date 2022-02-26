@@ -1,0 +1,133 @@
+@import '../../theme';
+
+*{
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   text-decoration: none;
+ }
+ 
+.nav-bar {
+  background: $ripe-lemon;
+  box-shadow: 0 4px 16px $shadow;
+  height: 60px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+}
+
+.logo-img {
+  height: 45px;
+  margin: 5px 50px 5px 100px ;
+}
+
+.nav-bar .navbar-list-container {
+  float: right;
+  margin-right: 40px;
+
+}
+
+.nav-bar .navbar-item {
+  display: inline-block;
+  margin: 15px 20px;
+}
+
+.nav-bar a {
+  color: $black;
+  display: block;
+  font-size: 14px;
+  padding-bottom: 8px;
+  text-decoration: none;
+}
+
+.nav-bar a.active {
+  border-bottom: 2px solid $black;
+  font-weight: $bold;
+  transition: .5s;
+}
+
+.nav-bar #icon {  
+  color: $black;
+  cursor: pointer;
+  display: none;
+  float: right;
+  line-height: 60px;
+  margin-right: 40px;
+}
+
+@media (max-width: 1180px) {
+
+  .logo-img {
+    margin-left: 50px;
+  }
+
+  .nav-bar .navbar-list-container {
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 830px) {
+
+  .logo-img {
+    margin: 5px 0 5px 20px ;
+  }
+
+  .nav-bar .navbar-list-container {
+    margin-right: 20px;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 745px) {
+
+  .nav-bar{
+    z-index: 6;
+  }
+
+  .nav-bar #icon {
+    display: block;
+  }
+
+  .logo-img {
+    float: center;
+  }
+
+  .nav-bar .navbar-list-container {
+    background: linear-gradient(180deg, $ripe-lemon 0%, $corn 100%);
+    border-radius: 0 0 16px 16px;
+    float: center;
+    height: 55vh;
+    left: 0;
+    left: 100%;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    text-align: center;
+    top: 58px;
+    transition: all .5s;
+    width: 100%;
+    z-index: 6;
+  }
+
+  .nav-bar .navbar-item {
+    display: block;
+    line-height: 10px;
+    margin: 45px 0;
+  }
+
+  .nav-bar a {
+    font-size: 24px;
+  }
+
+  .nav-bar a.active {
+    border-bottom: none;
+    font-weight: bold;
+    transition: .5s;
+  }
+
+  .nav-bar .navbar-list-container.active {
+    left: 0;
+  }
+}

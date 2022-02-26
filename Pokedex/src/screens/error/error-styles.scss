@@ -1,0 +1,106 @@
+@import '../../theme';
+
+.container-error {
+  align-items: center;
+  background: $punch;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  overflow: hidden;
+  position: absolute;
+  width: 100vw;
+  z-index: 999;
+}
+
+.background-error-text {
+  align-items: center;
+  color: $grey-dark;
+  display: flex;
+  font-size: 500px;
+  font-weight: $bolder;
+  letter-spacing: 4px;
+  line-height: 500px;
+}
+
+.team-rocket {
+  left: 30vw;
+  position: absolute;
+  top: 5vh;
+  width: 45vw;
+}
+
+.error-text {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.text {
+  font-size: 40px;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.text-white {
+  color: $white;
+}
+
+.text-black {
+  color: $black;
+}
+
+@media (max-width: 820px) {
+
+  .background-error-text {
+    font-size: 400px;
+    line-height: 400px;
+  }
+
+  .team-rocket {
+    width: 70vw;
+    left: 18vw;
+  }
+
+  .error-text {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 420px) {
+
+  .background-error-text {
+    font-size: 180px;
+    line-height: 180px;
+  }
+
+  .team-rocket {
+    left: 0;
+    top: 20vh;
+    width: 100vw;
+  }
+
+  .error-text {
+    margin-bottom: 3vh;
+    margin-top: 10vh;
+  }
+
+  .text {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 290px) {
+
+  .text {
+    font-size: 24px;
+  }
+}
+
+.return-btn {
+  background: $corn;
+  height: 42px;
+  width: 170px;
+}

@@ -1,0 +1,157 @@
+@import '../../theme';
+
+.pokedex {
+  background: linear-gradient(180deg, $white 30.32%, $cultured-pearl 100%);
+  min-height: 90vh;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.filters-container {
+  display: block;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  width: 70vw;
+}
+
+.filter {
+  margin-right: 30px;
+}
+
+.dropdown-filter-container {
+  display: none;
+}
+
+.pokedex-gallery {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.pokedex-heading {
+  color: $black;
+  font-size: 30px;
+  font-weight: normal;
+  letter-spacing: 3px;
+  line-height: 35px;
+  margin: 30px 0 12px 0;
+  text-align: center;
+}
+
+.pokedex-heading .text-bold {
+  font-size: inherit;
+  font-weight: $bolder;
+}
+
+.cards-container {
+  align-items: center;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, minmax(auto, 300px));
+  justify-items: center;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+.modal-card {
+  display: none;
+  transition: all 1s;
+}
+
+.modal-card.active {
+  display: block;
+  position: fixed;
+  top: 28%;
+  z-index: 7;
+}
+
+#close-icon {
+  display: none;
+}
+
+.modal-card.active #close-icon {
+  display: block;
+  position: absolute;
+  right: 6px;
+  top: -28px;
+  z-index: 8;
+}
+
+@media (max-width: 1000px) {
+
+  .filters-container {
+    width: 80vw;
+  }
+
+  .cards-container {
+    align-items: center;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, minmax(auto, 300px));
+    justify-items: center;
+  }
+
+  .pokedex-heading {
+    font-size: 28px;
+    line-height: 35px;
+    margin: 30px 10px 20px 10px;
+  }
+}
+
+@media (max-width: 824px) {
+
+  .cards-container {
+    align-items: center;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, minmax(auto, 364px));
+    justify-items: center;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .filters-container {
+    display: none;
+  }
+
+  .dropdown-filter-container {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 15px;
+  }
+
+  .filter {
+    margin-right: 4px;
+  }
+
+  .cards-container {
+    grid-gap: 10px;
+    grid-template-columns: repeat(1, minmax(auto, 300px));
+    margin-bottom: 30px;
+    margin-top: 0;
+  }
+
+  .pokedex-heading {
+    font-size: 20px;
+    line-height: 30px;
+    margin: 30px 20px 20px 20px;
+  }
+
+  .modal-card.active {
+    display: block;
+    left: 0;
+    top: 0;
+  }
+
+  .modal-card.active #close-icon {
+    display: block;
+    position: fixed;
+    left: 15px;
+    top: 15px;
+  }
+}

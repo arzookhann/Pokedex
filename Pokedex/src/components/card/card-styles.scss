@@ -1,0 +1,73 @@
+@import '../../theme';
+
+.card-container {
+  align-items: center;
+  background: $athens-gray;
+  border-radius: 8px;
+  box-shadow: 1px 1px 8px $shadow;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  max-height: 30vh;
+  padding: 0;
+  place-self: center;
+  position: relative;
+  transition: .5s ease;
+  width: fit-content;
+}
+.card-container:hover {
+  box-shadow: 12px 12px 12px $shadow-dark;
+  transform: scale(1.04);
+  z-index: 2;
+}
+
+.card-content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-heading {
+  color: $eerie-black;
+  font-size: 10px;
+  font-weight: $bold;
+  line-height: 21px;
+  margin: 0 10px;
+  text-shadow: 4px 4px 4px $shadow-light;
+}
+
+.card-container .card-img {
+  align-items: center;
+  background: linear-gradient(270deg, $tall-poppy 0.15%, $punch 100%);
+  border-radius: 0 8px 8px 0;
+  height: 17vh;
+  justify-content: right;
+  padding: 6px 10px 6px 28px;
+  position: relative;
+  width:22vh;
+}
+
+.ability-points-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  margin: 2px 0;
+}
+
+.type-label-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  left: 13px;
+  margin-bottom: 2px;
+  position: relative;
+  width:110%;
+}
+
+.points {
+  background: #F6F7F9;
+  box-shadow: none;
+  margin: 0;
+}

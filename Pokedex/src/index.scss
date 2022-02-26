@@ -1,0 +1,29 @@
+@import './theme';
+
+* {
+  box-sizing: border-box;
+  font-family: Karla;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  background: linear-gradient(180deg, $white 30.32%, $cultured-pearl 100%);
+  left: 0;
+  top: 0;
+}
+
+body::-webkit-scrollbar {
+  background: linear-gradient(180deg, $white 30.32%, $cultured-pearl 100%);
+  border-radius: 0 8px 8px 0;
+  width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, $ripe-lemon 0%, $corn 100%);
+  border-radius: 9px;
+}

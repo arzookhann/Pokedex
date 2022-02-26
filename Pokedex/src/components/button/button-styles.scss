@@ -1,0 +1,35 @@
+@import '../../theme';
+
+.util-button {
+  align-items: center;
+  appearance: none;
+  border-radius: 11px;
+  border-width: 0;
+  box-shadow: inset 0 -5px 0 $shadow;
+  box-sizing: border-box;
+  color: $black;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1;
+  overflow: hidden;
+  padding-bottom: 4px;
+  padding-left: 50px;
+  padding-right: 50px;
+  position: relative;
+  text-decoration: none;
+  transition: box-shadow .15s, transform .15s;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+}
+
+.util-button:hover {
+  box-shadow: inset 0 -5px 0 $shadow;
+  transform: translateY(-2px);
+}
+
+.util-button:active {
+  transform: translateY(2px);
+}

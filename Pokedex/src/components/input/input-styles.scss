@@ -1,0 +1,32 @@
+@import '../../theme';
+
+.input{
+  background: $concrete;
+  border-radius: 40px;
+  border:none;
+  box-shadow: 4px 4px 16px $shadow;
+  box-sizing:border-box;
+  height:35px;
+  outline:none;
+  padding:0 18px; 
+  position: relative;
+  width: 70vw;
+}
+
+@media (max-width: 1000px) {
+  .input {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 750px) {
+  .input {
+    width: 90vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .input {
+    width: 95vw;
+  }
+}

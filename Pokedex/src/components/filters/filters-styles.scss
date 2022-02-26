@@ -1,0 +1,241 @@
+@import '../../theme';
+
+* {
+  box-sizing: border-box;
+  font-size: 12px;
+  margin: 0;
+}
+
+.select-box {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  position: relative;
+  width: 120px;
+}
+
+.select-box .options-container {
+  background: $concrete;
+  border-radius: 8px;
+  box-shadow: 4px 4px 8px $shadow;
+  max-height: 0; 
+  opacity: 0;
+  order: 1;
+  overflow: hidden;
+  position: absolute;
+  top: 28px;
+  transition: all 0.4s;
+  width: 120px;
+  z-index: 8;
+}
+
+.selected {
+  align-items: center;
+  background: $concrete;
+  border-radius: 4px;
+  box-shadow: 2px 2px 2px $shadow-light;
+  color: $black;
+  display: flex;
+  height: 20px;
+  justify-content: center;
+  margin-bottom: 8px;
+  order: 0;
+  position: relative;
+  text-align: center;
+  width: 120px;
+}
+
+.selected::after {
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: url("../../assets/arrow-down.svg");
+  position: absolute;
+  right: 5px;
+  top: 3px;
+  transition: all 0.4s;
+  width: 15px;
+}
+
+.select-box .options-container.active {
+  max-height: 120px;
+  opacity: 1;
+  overflow-y: scroll;
+}
+
+.select-box .options-container.active + .selected::after {
+  bottom: 1.1px;
+  transform: rotateX(180deg);
+}
+
+.select-box .options-container::-webkit-scrollbar {
+  background: transparent;
+  border-radius: 0 8px 8px 0;
+  width: 4px;
+}
+
+.select-box .options-container::-webkit-scrollbar-thumb {
+  background: $nobel;
+  border-radius: 8px;
+}
+
+.option,
+.selected {
+  cursor: pointer;
+  padding: 1px 2px;
+}
+
+.select-box .option:hover {
+  background: $grey-light;
+}
+
+.checkbox-option-label {
+  cursor: pointer;
+}
+
+.option .checkbox {
+  height: 8px;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 8px;
+}
+
+.range-input-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.filter-range-input {
+  background: $coconut;
+  border-radius: 16px;
+  border: none;
+  box-shadow: 2px 2px 2px $shadow;
+  margin: 5px;
+  outline: none;
+  padding: 3px 3px 3px 10px;
+  width: 80%;
+}
+
+.filter-bar {
+  background-color: $black;
+  border-radius: 8px;
+  height: 2px;
+  margin: 2px;
+  width: 15px;
+}
+
+
+
+.dropdown-filter-box {
+  background: linear-gradient(180deg, $ripe-lemon 0%, $corn 100%);
+  border-radius: 0 0 16px 16px;
+  box-shadow: 4px 4px 24px $shadow;
+  float: center;
+  height: fit-content;
+  left: 100%;
+  margin: 0;
+  order: 1;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 0;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  transition: all .5s;
+  width: 100%;
+  z-index: 8;
+}
+
+.dropdown-filter-box::-webkit-scrollbar {
+  background: transparent;
+  border-radius: 0 16px 16px 0;
+  width: 6px;
+}
+
+.dropdown-filter-box::-webkit-scrollbar-thumb {
+  background: $buttered-rum;
+  border-radius: 16px;
+}
+
+.dropdown-filter-box.active {
+  top: 0;
+  left: 0;
+}
+
+#close-icon {
+  display: none;
+}
+
+.dropdown-filter-box.active #close-icon {
+  display: block;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+.type-filter-container {
+  border-bottom: 2px solid $concrete;
+  margin: 15px 15px 0 15px;
+  padding: 10px;
+}
+
+.checkbox-item-container {
+  align-items: center;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  justify-items: left;
+  margin-top: 5px;
+}
+
+.dropdown-range-filter-container {
+  background: transparent;
+  border-bottom: 2px solid $concrete;
+  margin: 0 15px 15px 15px;
+  padding: 10px;
+}
+
+.dropdown-range-filter-container .range-input-container {
+  background: $coconut;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.dropdown-range-filter-container .filter-bar {
+  margin: 20px 2px;
+}
+
+.dropdown-range-filter-container input {
+  background: $athens-gray;
+}
+
+.drop-down-input-filter-container {
+  display: flex;
+}
+
+.filter-box-heading {
+  font-weight: $bold;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.btn-style {
+  background: $pastel-green;
+  box-shadow: inset 0 -4px 0 $shadow;
+  font-size: 11px;
+  height: 24px;
+  margin: 5px;
+  padding: 5px 22px 8px 22px;
+  width: 80%;
+}
+
+.dropdown-btn {
+  width: 30%;
+}

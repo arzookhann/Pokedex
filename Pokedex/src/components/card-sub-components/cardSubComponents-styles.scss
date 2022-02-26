@@ -1,0 +1,105 @@
+@import '../../theme';
+@import './pokemonTypesLabelClasses-styles.scss';
+
+.ability-points {
+  align-items: center;
+  background: $coconut;
+  border-radius: 5px;
+  box-shadow: 4px 4px 24px $shadow;
+  display: flex;
+  flex-direction: column;
+  height: 52px;
+  justify-content: center;
+  margin: 5px;
+  padding: 5px;
+  position: relative;
+  width: 52px;
+}
+
+.ability-points .points-container {
+  align-items: center;
+  border-radius: 15px;
+  border: 2px solid $eerie-black;
+  box-sizing: border-box;
+  color: $eerie-black;
+  display: flex;
+  height: 26px;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  text-align: center;
+  width: 26px;
+}
+
+.ability-points .points-container .points-text {
+  font-size: 10px;
+  line-height: 18px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  text-align: center;
+}
+
+.ability {
+  color: $tundora;
+  font-size: 10px;
+  line-height: 12px;
+  margin: 0;
+  padding: 3px 0 0 0;
+  position: relative;
+  text-align: center;
+}
+
+.type-label {
+  border-radius: 11px;
+  box-shadow: inset 0px -2px 0px $shadow-light;
+  color: $eerie-black;
+  font-size: 8px;
+  line-height: 10px;
+  margin: 2px;
+  padding: .5px 10px 1.5px 10px;
+  position: relative;
+  text-align: center;
+  width: 50px;
+  z-index: 2;
+}
+
+.progress-bar-container {
+  background: $coconut;
+  border-radius: 8px;
+  margin: 2px;
+  padding: 3px;
+  position: relative;
+  width: 98%;
+}
+
+.progress-bar-container .progress-bar-title {
+  align-items: center;
+  color: $black;
+  display: flex;
+  font-size: 10px;
+  line-height: 12px;
+  margin: 0 0 5px 0;
+  padding: 0;
+}
+
+.id-label {
+  align-items: center;
+  background: $corn1;
+  border-radius: 50%;
+  font-size: 11px;
+  height: 28px;
+  line-height: 28px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 28px;
+}
+
+@media (max-width: 520px) {
+  .progress-bar-container .progress-bar-title {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
