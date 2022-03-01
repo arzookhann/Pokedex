@@ -5,6 +5,7 @@ import Button from "../button/Button";
 import "./googleAuthBtn-styles.scss";
 
 export const GoogleAuthBtn = () => {
+  
   const { user, login, logout } = useAuth();
 
   return (
