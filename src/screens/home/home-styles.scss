@@ -1,6 +1,8 @@
 @import '../../theme';
 
 .home {
+  display: flex;
+  justify-content: center;
   align-items: center;
   background: linear-gradient(180deg, $ripe-lemon 0%, $corn 100%);
   height: 100vh;
@@ -12,20 +14,17 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
-  margin-top: 50px;
 }
 
 .banner-content {
   align-items:flex-start;
   display: flex;
   flex-direction: column;
-  margin: 0px 50px 0px 120px;
-  padding: 0;
+  margin: 0 50px 0 120px;
   width: 48%;
 }
 
 .banner-img-container {
-  margin-top: 25px;
   width: 52%;
 }
 
@@ -40,7 +39,6 @@
   letter-spacing: 4px;
   line-height: 68px;
   margin-bottom: 10px;
-  margin-top: 0;
 }
 
 .banner-heading .text-bold {
@@ -57,7 +55,6 @@
 }
 
 .btn {
-  height: 0;
   margin-top: 20px;
 }
 
@@ -110,6 +107,10 @@
 
 @media (max-width: 800px) {
 
+  .banner-img-container {
+    margin: 0;
+  }
+
   .banner-img{
     width: 45vw;
   }
@@ -135,7 +136,7 @@
 
 @media (max-width: 600px) {
 
-   .banner-img {
+  .banner-img {
     width: 420px;
   }
 
@@ -156,7 +157,7 @@
   }
 
   .btn {
-    margin-bottom: 0;
+    margin-bottom: 50px;
   }
 }
 
@@ -179,6 +180,10 @@
   .banner-description {
     font-size: 18px;
     line-height: 22px;
+  }
+
+  .btn {
+    margin-bottom: 0;
   }
 }
 
