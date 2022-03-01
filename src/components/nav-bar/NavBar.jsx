@@ -7,7 +7,7 @@ import Overlay from "../overlay/Overlay";
 
 import "./navBar-styles.scss";
 
-import logo from "../../assets/logo.svg";
+import logo from "../../assets/images/logo.svg";
 
 const NavBar = () => {
   const { user } = useAuth();
@@ -24,7 +24,7 @@ const NavBar = () => {
   return (
     <>
       <nav className="nav-bar">
-        <img className="logo-img" src={logo} />
+        <img className="logo-img" src={logo} alt="Logo" />
         <ul
           className={`navbar-list-container ${isActive ? "active" : ""}`}
           onClick={removeActiveClass}

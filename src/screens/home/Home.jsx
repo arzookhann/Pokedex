@@ -3,7 +3,7 @@ import Footer from '../../components/footer/Footer';
 
 import './home-styles.scss';
 
-import banner from '../../assets/banner.svg';
+import banner from '../../assets/images/banner.svg';
 
 const Home = () => {
 
@@ -22,7 +22,7 @@ const Home = () => {
           </div>
         </div>
         <div className="banner-img-container">
-          <img className="banner-img" src={banner} alt="banner" />
+          <img className="banner-img" src={banner} alt="Banner" />
         </div>
       </div>
       <Footer className='footer-position' />

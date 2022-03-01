@@ -4,9 +4,10 @@ import Button from "../../components/button/Button";
 
 import "./error-styles.scss";
 
-import teamRocketImg from "../../assets/team-rocket-trio.svg";
+import teamRocketImg from "../../assets/images/team-rocket-trio.svg";
 
 const Error = () => {
+
   const navigate = useNavigate();
   const handleClick = () => {
     navigate(-1);
@@ -14,11 +15,8 @@ const Error = () => {
 
   return (
     <div className="container-error">
-      <div className="background-text-container">
-        <span className="background-error-text">404</span>
-        <img className="team-rocket" src={teamRocketImg} alt="team-rocket" />
-      </div>
-      <div className="error-text">
+      <img className="team-rocket-img" src={teamRocketImg} alt="Team Rocket" />
+      <div className="error-text-container">
         <span className="text text-white">The rocket team</span>
         <span className="text text-black">has won this time.</span>
       </div>
