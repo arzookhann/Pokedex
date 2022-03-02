@@ -1,8 +1,8 @@
 import "./button-styles.scss";
 
 const Button = (props) => {
-  
-  const { children, onClick, className } = props;
+
+  const { btnLabel = "", onClick = () => {}, className = "" } = props;
 
   return (
     <button
@@ -10,7 +10,7 @@ const Button = (props) => {
       className={`util-button ${className}`}
       role="button"
     >
-      {children}
+      {btnLabel}
     </button>
   );
 };

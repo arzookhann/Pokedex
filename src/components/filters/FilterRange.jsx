@@ -6,8 +6,19 @@ import { capitalize } from "../../utils/functions";
 
 import "./filters-styles.scss";
 
-const FilterRange = (props) => {
+export const FilterInput = (props) => {
+  const { placeholder } = props;
 
+  return (
+    <input
+      className="filter-range-input"
+      type="number"
+      placeholder={placeholder}
+    />
+  );
+};
+
+const FilterRange = (props) => {
   const { heading } = props;
   const [isActive, setIsActive] = useState(false);
 
@@ -18,23 +29,14 @@ const FilterRange = (props) => {
     <div className="select-box">
       <div className={`options-container ${isActive && "active"}`}>
         <div className="range-input-container">
-          <input
-            className="filter-range-input"
-            type="number"
-            placeholder="From"
-          />
+          <FilterInput placeholder="From" />
           <span className="filter-bar" />
-          <input
-            className="filter-range-input"
-            type="number"
-            placeholder="To"
-          />
+          <FilterInput placeholder="To" />
           <Button
-            className="btn-style"
+            btnLabel="Apply"
+            className="filter-range-btn"
             onClick={removeActiveClass}
-          >
-            Apply
-          </Button>
+          />
         </div>
       </div>
       <div onClick={toggleActiveClass} className="selected">

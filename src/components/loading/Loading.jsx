@@ -1,13 +1,17 @@
 import "./loading-styles.scss";
 
+const renderLoadingBars = (barCount = 3) => {
+  const loadingBars = [];
+  for (let i = 1; i <= barCount; i++) {
+    loadingBars.push(
+      <div key={i} className={`loading-bars loading-bar-${i}`} />
+    );
+  }
+  return loadingBars;
+};
+
 const Loading = () => {
-  return (
-    <div className="loading-bars-container">
-      <div className="loading-bars loading-bar-1" />
-      <div className="loading-bars loading-bar-2" />
-      <div className="loading-bars loading-bar-3" />
-    </div>
-  );
+  return <div className="loading-bars-container">{renderLoadingBars()}</div>;
 };
 
 export default Loading;

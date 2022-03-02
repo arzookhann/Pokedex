@@ -20,9 +20,7 @@ const Error = () => {
         <span className="text text-white">The rocket team</span>
         <span className="text text-black">has won this time.</span>
       </div>
-      <Button onClick={handleClick} className="return-btn">
-        Return
-      </Button>
+      <Button btnLabel="Return" onClick={handleClick} className="return-btn" />
     </div>
   );
 };

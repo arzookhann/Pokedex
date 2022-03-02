@@ -3,6 +3,13 @@ const POKEMONS_DATA_API =
 
 const POKEMON_DATA_BY_NAME_API = "https://pokeapi.co/api/v2/pokemon/";
 
+const NAVBAR_LIST = {
+  Home: "/",
+  Pokédex: "/pokedex",
+  Legendaries: "/legendaries",
+  Documentation: "/documentation",
+};
+
 const TYPE_FILTER_OPTIONS = [
   "bug",
   "dragon",
@@ -24,14 +31,12 @@ const TYPE_FILTER_OPTIONS = [
   "water",
 ];
 
-const PROGRESS_BAR_COLORS = ["#64D368", "#F2B807"]; // pastel-green, corn
-
-const PROGRESS_BAR_BACKGROUND = "#F6F7F9"; // athens-grey
+const RANGE_FILTER_HEADINGS = ["Attack", "Experience"];
 
 export {
-  POKEMONS_DATA_API,
+  NAVBAR_LIST,
   POKEMON_DATA_BY_NAME_API,
+  POKEMONS_DATA_API,
+  RANGE_FILTER_HEADINGS,
   TYPE_FILTER_OPTIONS,
-  PROGRESS_BAR_BACKGROUND,
-  PROGRESS_BAR_COLORS,
 };

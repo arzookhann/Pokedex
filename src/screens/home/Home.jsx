@@ -17,7 +17,7 @@ const Home = () => {
           <h2 className="banner-description">
             You can know the type of Pokémon, its strengths, disadvantages and abilities
           </h2>
-          <div className="btn">
+          <div className="home-btn-container">
             <GoogleAuthBtn />
           </div>
         </div>

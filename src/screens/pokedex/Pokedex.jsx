@@ -6,7 +6,7 @@ import axios from "axios";
 import Footer from "../../components/footer/Footer";
 import Input from "../../components/input/Input";
 import Card from "../../components/card/Card";
-import ModalCard from "../../components/modal-card/ModalCard";
+import Modal from "../../components/modal/Modal";
 import FilterCheckbox from "../../components/filters/FilterCheckbox";
 import FilterRange from "../../components/filters/FilterRange";
 import DropdownFilterBox from "../../components/filters/FiltersDropdown";
@@ -133,7 +133,7 @@ const Pokedex = () => {
             <label onClick={removeActiveClass} id="close-icon">
               <i className="fa fa-close fa-2x" />
             </label>
-            <ModalCard {...pokemonModalData} />
+            <Modal {...pokemonModalData} />
           </div>
         </div>
         <Footer />

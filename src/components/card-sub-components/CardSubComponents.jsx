@@ -26,14 +26,22 @@ export const TypeLabel = (props) => {
 }
 
 export const ProgressBar = (props) => {
-  const { title = '', value = 0, color = '' } = props;
+  const { title = "", value = 0, color = "" } = props;
+  const progressBarHeight = 4;
+  const percentValue = Math.trunc(value / 1.7);
   return (
-    <div className='progress-bar-container'>
-      <p className='progress-bar-title'>{capitalize(title)} {value}</p>
-      <CustomizedProgressBars height={4} colorValue={color} value={Math.trunc(value / 1.7)} />
+    <div className="progress-bar-container">
+      <p className="progress-bar-title">
+        {capitalize(title)} {value}
+      </p>
+      <CustomizedProgressBars
+        height={progressBarHeight}
+        colorValue={color}
+        value={percentValue}
+      />
     </div>
-  )
-}
+  );
+};
 
 export const IdLabel = (props) => {
   const { id } = props;

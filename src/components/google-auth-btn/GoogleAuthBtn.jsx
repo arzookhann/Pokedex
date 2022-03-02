@@ -11,13 +11,17 @@ export const GoogleAuthBtn = () => {
   return (
     <>
       {!user ? (
-        <Button name="Google" onClick={login} className="auth-btn login-btn">
-          Google
-        </Button>
+        <Button
+          btnLabel="Google"
+          onClick={login}
+          className="auth-btn login-btn"
+        />
       ) : (
-        <Button name="Google" onClick={logout} className="auth-btn logout-btn">
-          Logout
-        </Button>
+        <Button
+          btnLabel="Logout"
+          onClick={logout}
+          className="auth-btn logout-btn"
+        />
       )}
     </>
   );

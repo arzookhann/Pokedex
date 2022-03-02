@@ -5,6 +5,8 @@ import { useAuth } from "../../contexts/UserAuthContext";
 
 import Overlay from "../overlay/Overlay";
 
+import { NAVBAR_LIST } from "../../utils/constants";
+
 import "./navBar-styles.scss";
 
 import logo from "../../assets/images/logo.svg";
@@ -29,18 +31,11 @@ const NavBar = () => {
           className={`navbar-list-container ${isActive ? "active" : ""}`}
           onClick={removeActiveClass}
         >
-          <li className="navbar-item">
-            <NavLink to="/">Home</NavLink>
-          </li>
-          <li className="navbar-item">
-            <NavLink to="/pokedex">Pokédex</NavLink>
-          </li>
-          <li className="navbar-item">
-            <NavLink to="/legendaries">Legendaries</NavLink>
-          </li>
-          <li className="navbar-item">
-            <NavLink to="/documentation">Documentation</NavLink>
-          </li>
+          {Object.entries(NAVBAR_LIST).map(([navListItem, path]) => (
+            <li key={navListItem} className="navbar-item">
+              <NavLink to={path}>{navListItem}</NavLink>
+            </li>
+          ))}
           {user && (
             <li className="navbar-item">
               <NavLink to="/user">Welcome {user.name}</NavLink>
